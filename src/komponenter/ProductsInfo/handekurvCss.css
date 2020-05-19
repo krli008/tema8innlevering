@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.handekurvLayout{
+    margin: auto;
+    padding: 2rem 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.varerHandlekurv{
+    border-bottom: 2px solid rgb(230, 155, 180);
+}
+
+.infoHandle {
+    margin-top: 1rem;
+    background-color: #eee;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+}
+
+.infoHandle h1 {
+    padding-top: 1rem;
+}
+
+.infoHandle input {
+    padding: 1rem 8rem 1rem 1rem;
+    text-align: left;
+    margin: 0.5rem 0 0 0;
+}
+
+.infoHandle button {
+    margin: 0.5rem 0 0 0;
+    padding: 1rem 6.7rem 1rem 0rem;
+    border-radius: 0.2rem;
+    background-color: rgb(230, 155, 180);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+}

@@ -1,38 +1,317 @@
-.App {
-  text-align: center;
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, h1, p {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header {
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  background-color: rgb(232, 158, 183);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center; 
+}
+
+/*HIDDEN on mobile*/ 
+.header .desktopMenu{ 
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.header .desktopMenu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  color: white;
+  position: relative;
+  justify-self: left;
+}
+
+.header .desktopMenu a:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: .2s linear;
+}
+
+.desktopMenu a:hover:before, a:focus:before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-link--active{
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.nav-link--active:hover:before{
+  visibility: hidden !important;
+}
+
+.headerMobile{
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  background-color: transparent;
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .desktopMenu {
+      display: none;
+      opacity: 0;
+  }
+
+  .headerMobile{
+      display: initial;
+  }
+  .mobileToggleMenuBtn{
+      opacity: 1;
+      position: absolute;
+      z-index: 5;
+      width: 3rem;
+      height: 2.5rem;
+      top: 0.5rem;
+      right: 1.2rem;
+      fill: white;
+      -webkit-transition: opacity 300ms; 
+      transition: opacity 300ms;
+      background-color: transparent;
+  }
+
+  .mobileToggleMenuBtn button{
+      background-color: transparent;
+      border: none;
+  }
+
+  .mobileMenu {
+      opacity: 0;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #a7a7a7;
+      text-align: center;
+      -webkit-transition: opacity 300ms; 
+      transition: opacity 300ms;
+  }
+
+  .mobileExitBtn{
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      fill: white;
+  }
+
+  .mobileExitBtn button{
+      background-color: transparent;
+      border: none;
+  }
+
+  .mobileMenuList {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+  }
+
+  .mobileMenuList h2 {
+      color: white;
+      text-decoration-line: underline;
+  }
+
+  .mobileMenuList a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase !important;
+      font-size: 1.5rem;
+      display: block;
+  }
+
+  .nav-link--active{
+      color: white !important;
+      font-weight: 400 !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.HomePage {
+  padding-top: 2rem;
+}
+
+.bildeforside{
+  margin: 1.8rem 2rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.bildeforside h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.bildeforside img{
+  grid-row: span 2;
+  height: 35rem;
+  width: 35rem;
+  object-fit: contain;
+}
+
+.bildeforside button {
+  width: 20rem;
+  height: 8rem;
+
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.firstWord {
+  padding-top: rem;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tips1 {
+  margin: 1rem 5rem 0 5rem;
+  height: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: #eee;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.tips1 p{
+  margin-left: 1rem;
+  margin: auto;
+}
+
+.forslag {
+  margin-top: 2rem;
+  display: grid;
+  padding: 0 1.5rem 0 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+
+.forslag div {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.forslag img {
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.forslag div img:hover{
+  height: 16rem;
+  width: 16rem;
+}
+
+.forslag div h1 {
+  text-align: center;
+}
+
+.forslag div button {
+  margin-left: 25%;
+  margin-top: 0.5rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(230, 155, 180);
+  color: white;
+  text-transform: uppercase;
+}
+
+.forslag div button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(230, 155, 180);
+}
+
+.nytt1{
+  margin: 4rem 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  
+  color: white;
+  background-image: linear-gradient(to right, white, rgb(237, 222, 188), white);
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.nytt1 img{
+  height: 35rem;
+  width: 35rem;
+  object-fit: contain;
+}
+
+
+.footer{
+  background-color: rgb(147, 147, 147);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 7rem 0 7rem;
+}
+
+.footer div{
+  padding: 2rem;
+}
+
+.footer button{
+  margin-left: 0.3rem;
+  border-radius: 10%;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(230, 155, 180);
+}
+
+.nyhetside{
+  margin: 2rem 5rem 2rem 5rem;
+  background-color: #eee;
+}
+
+.overskrift{
+  padding: 1rem 2rem 0 2rem ;
+}
+

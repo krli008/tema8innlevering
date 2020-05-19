@@ -1,0 +1,61 @@
+
+.overlay {  
+    border: 5px solid rgb(230, 155, 180);
+    position: absolute;
+    width: 800px;
+    height: 530px;
+    position: absolute;
+    transform: translate(-45%,-90%);
+    background-color: white;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.overlay button {
+    margin: 0.5rem 0 0 0;
+    padding: 1rem 6.7rem 1rem 1rem;
+    border-radius: 0.2rem;
+    background-color: pink;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: 2rem solid rgb(230, 155, 180);
+}
+
+.overlay img {
+    padding-left: 1rem;
+    grid-row: 2 / span 5;
+}
+
+.infoProd {
+    margin: 0;
+    padding: 0;
+}
+
+.xknap{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    float: right;
+    grid-column: 1 / span 2;
+}
+
+@media only screen and (max-width: 1024px){
+    .overlay {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .overlay {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 0rem;
+    }
+    .productsShow-columns img{
+        width: 30vw;
+    }
+    .productsShow-columns h4{
+        font-size: 1.5rem;
+    }
+
+}
