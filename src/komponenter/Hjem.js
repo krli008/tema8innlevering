@@ -8,7 +8,7 @@ const Hjem = () => {
     return(
         <section className='HomePage'>
             <div className='bildeforside'>
-                <img src="./img/forsidebilde1.jpeg" alt="to kvinner" />
+                <img src="https://images.unsplash.com/photo-1552160753-117159821e01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"/>
                 <h1 className='firstWord'>Summer <br></br> Cravings</h1>
             </div>
 
@@ -20,7 +20,7 @@ const Hjem = () => {
         
             <article className='forslag'>
             <div> 
-                <img src="./img/jeans1.jpeg" alt="jeans" />
+                <img src="https://images.unsplash.com/photo-1547410701-73b5a0ada51d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80" />
                 <h1>Bukser</h1>
                 <Route render={({ history}) => (
                 <button type='button' onClick={() => { history.push('/Nyhet') }}
@@ -28,7 +28,7 @@ const Hjem = () => {
                 )} />
             </div>
             <div>
-                <img src="./img/shoes1.jpeg" alt="shoes" />
+                <img src="https://images.unsplash.com/photo-1553545985-1e0d8781d5db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80" />
                 <h1>Sko</h1>
                 <Route render={({ history}) => (
                 <button type='button' onClick={() => { history.push('/Nyhet') }}
@@ -36,7 +36,7 @@ const Hjem = () => {
                 )} />
             </div>
             <div>
-                <img src="./img/topp1.jpg" alt="tshirt" />
+                <img src="https://cdn1.hellomolly.com/media/catalog/product/cache/1/small_image/667x1001/c96a280f94e22e3ee3823dd0a1a87606/2/0/200501hm1135.jpg"/>
                 <h1>Topper</h1>
                 <Route render={({ history}) => (
                 <button type='button' onClick={() => { history.push('/Nyhet') }}
@@ -44,7 +44,7 @@ const Hjem = () => {
                 )} />
             </div>
             <div>
-                <img src="./img/dress.jpeg" alt="dress" />
+                <img src="https://images.unsplash.com/photo-1500643752441-4dc90cda350a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=657&q=80"/>
                 <h1>kjoler</h1>
                 <Route render={({ history}) => (
                 <button type='button' onClick={() => { history.push('/Nyhet') }}
@@ -54,9 +54,9 @@ const Hjem = () => {
         </article>
 
         <article className='nytt1'>
-            <img src="./img/forsidebilde2.jpeg" alt="bilde2forside" />
+            <img src="https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
             <h1>Dess up <br></br> to stay in</h1>
-            <img src="./img/forsidebilde3.jpeg" alt="bilde3forside" />
+            <img src="https://images.unsplash.com/photo-1550614412-40be4484c638?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
         </article>
 
         <footer>

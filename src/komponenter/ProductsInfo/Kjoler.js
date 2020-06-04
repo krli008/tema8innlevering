@@ -1,8 +1,5 @@
 import React, { useState, useEffect} from 'react';
 import ProductsKlaer from './ProductsKlaer'
-import KlesplagProd from '../../KlesplagProd.json';
-import { Route } from 'react-router-dom'
-
 import './ProductsCss.css'
 
 const klaerProductsList = [
@@ -192,7 +189,7 @@ const klaerProductsList = [
     }
 ]
 
-const ProductsLib = (props) => {
+const Kjoler = (props) => {
 
     function highlightHandler (highlightedBtnId, containerId) {
         const klaerBtnCluster = document.getElementById('klaerDiv');
@@ -218,7 +215,6 @@ const ProductsLib = (props) => {
         }
     }
 
-    const kjoleProd = klaerProductsList.filter( klaerProd => klaerProd.Kategori === "Kjole")
     var KlesplagProd = klaerProductsList
     var [products, filterProducts] = useState(KlesplagProd)
 
@@ -299,5 +295,4 @@ const ProductsLib = (props) => {
     )
 }
 
-
-export default ProductsLib
+export default Kjoler
